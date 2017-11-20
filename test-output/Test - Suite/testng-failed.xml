@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test - Suite]" parallel="tests">
+  <test name="chrome(failed)" parallel="classes">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.selenium.unittest.max.Dictionary">
+        <methods>
+          <include name="deleteDictionary"/>
+          <include name="beforeTest"/>
+          <include name="getResult"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.selenium.unittest.max.Dictionary -->
+    </classes>
+  </test> <!-- chrome(failed) -->
+  <test name="firefox(failed)" parallel="classes">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.selenium.unittest.max.Dictionary">
+        <methods>
+          <include name="deleteDictionary"/>
+          <include name="beforeTest"/>
+          <include name="getResult"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.selenium.unittest.max.Dictionary -->
+    </classes>
+  </test> <!-- firefox(failed) -->
+</suite> <!-- Failed suite [Test - Suite] -->

@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test - Suite">
+<!--   	<test name="firefox">
+	 <parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.selenium.unittest.max.Registration"></class>
+		</classes>
+	</test> -->
+	<test name="chrome">
+	 <parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.selenium.unittest.max.Registration"></class>
+		</classes>
+	</test>
+<!-- 	<test name="ie">
+	 <parameter name="browser" value="ie" />
+		<classes>
+			<class name="com.selenium.unittest.max.Registration"></class>
+		</classes>
+	</test> -->
+</suite>
