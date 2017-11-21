@@ -19,6 +19,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="src" path="resources"/>
-	<classpathentry exported="true" kind="lib" path="/MAX/WebContent/WEB-INF/lib/max-file-util.jar"/>
+	<classpathentry kind="lib" path="lib/max-file-util.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
