@@ -5,13 +5,78 @@
     <classes>
       <class name="com.selenium.unittest.max.Registration">
         <methods>
-          <include name="emptyLastname"/>
           <include name="getResult"/>
           <include name="beforeMethod"/>
-          <include name="emptyFirstname"/>
           <include name="prastartTest"/>
+          <include name="emptyEmail"/>
         </methods>
       </class> <!-- com.selenium.unittest.max.Registration -->
+      <class name="com.selenium.unittest.max.Topics">
+        <methods>
+          <include name="emptyKeywordTopicsProductReview"/>
+          <include name="emptySourceTopicsProductReview"/>
+          <include name="getResult"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+          <include name="emptyBrandKeywordTopicsProductReview"/>
+        </methods>
+      </class> <!-- com.selenium.unittest.max.Topics -->
+      <class name="com.selenium.unittest.max.Login">
+        <methods>
+          <include name="emptyEmailForgotPass"/>
+          <include name="emptyPassword"/>
+          <include name="beforeTest"/>
+          <include name="showFormEmailForgotPassword"/>
+          <include name="beforeMethod"/>
+          <include name="getResult"/>
+          <include name="emptyUsername"/>
+          <include name="invalidEmailForgotPass"/>
+        </methods>
+      </class> <!-- com.selenium.unittest.max.Login -->
+      <class name="com.selenium.integrationtest.max.ChangePassword">
+        <methods>
+          <include name="getResult"/>
+          <include name="startTest"/>
+          <include name="validChangePass"/>
+        </methods>
+      </class> <!-- com.selenium.integrationtest.max.ChangePassword -->
+      <class name="com.selenium.unittest.max.Home">
+        <methods>
+          <include name="linkRegister"/>
+          <include name="finish"/>
+          <include name="prastartTest"/>
+          <include name="linkSignIn"/>
+        </methods>
+      </class> <!-- com.selenium.unittest.max.Home -->
+      <class name="com.selenium.unittest.max.Dictionary">
+        <methods>
+          <include name="emptyKeywordDic"/>
+          <include name="nameDictionaryMoreThan255"/>
+          <include name="spaceKeywordDic"/>
+          <include name="beforeTest"/>
+          <include name="emptyNameDictionary"/>
+          <include name="getResult"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.selenium.unittest.max.Dictionary -->
+      <class name="com.selenium.unittest.max.Crawler">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="emptyKeyword"/>
+          <include name="emptyNameSource"/>
+          <include name="emptySource"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.selenium.unittest.max.Crawler -->
+      <class name="com.test.Testng">
+        <methods>
+          <include name="afterTest"/>
+          <include name="test1"/>
+          <include name="prastartTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.test.Testng -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

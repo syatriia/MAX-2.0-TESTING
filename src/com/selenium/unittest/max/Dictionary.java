@@ -123,6 +123,7 @@ public class Dictionary {
     	logger.log(Status.PASS, "Show message : This field is required");
 	}catch (Exception e) {
 	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
+	    Assert.fail(e.getMessage());
 	}
     }
     
@@ -149,11 +150,12 @@ public class Dictionary {
    	logger.log(Status.PASS, "Test Case Success : lenght name topics is "+lenght);
    	} catch (Exception e) {
    	    logger.log(Status.FAIL, e.getMessage());
+   	 Assert.fail(e.getMessage());
    	}
     }
     
     @Test(enabled=false)
-    public void createDictionary() throws InterruptedException {
+    public void createDictionary(){
 	
 	ExtentTest logger = extent.createTest("Test valid create dictionary");
 	try {
@@ -204,20 +206,17 @@ public class Dictionary {
 	    }
 //	    sideMenu.click();
 	    btnDelDic.click();
-	    
 	    validationDel.click();
-	    
 	    btnSubmit.click();
-	    
-	    
+    
 	    listDic = driver.findElements(By.className("panel-title"));
 	    sizeAfter = listDic.size();
 	    assertTrue(sizeAfter<sizeBefore);
 	    System.out.println(sizeAfter+" "+sizeBefore);
 	}catch (Exception e) {
 	    logger.log(Status.FAIL, e.getMessage());
+	    Assert.fail(e.getMessage());
 	}
-	
     }
     
     @Test
@@ -225,18 +224,17 @@ public class Dictionary {
 	expected = "Add Dictionary first to continue";
 	ExtentTest logger = extent.createTest("Test Empty Keyword Dictionary");
 	try {
-	    WebElement btnDictionary,btnAdd,submit;
 	    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/button/span")).click();
 	    logger.log(Status.INFO, "Click Button Add Dictionary");
-	    driver.findElement(By.id("create_dictName")).sendKeys("Test Dic");;
-	    submit = driver.findElement(By.xpath("//form[@id='form_create']/div[3]/button[2]"));
-	    submit.click();
+	    driver.findElement(By.id("create_dictName")).sendKeys("Test Dic");
+	    driver.findElement(By.xpath("//form[@id='form_create']/div[3]/button[2]")).click();
 	    logger.log(Status.INFO, "Click Button Submit");
 	    actual = driver.findElement(By.id("create_dictName-error")).getText();
 	    assertEquals(actual, expected);
 	    logger.log(Status.PASS, "Show message : This field is required");
 	}catch (Exception e) {
 	    logger.log(Status.FAIL, e.getMessage());
+	    Assert.fail(e.getMessage());
 	}
     }
     
@@ -245,7 +243,6 @@ public class Dictionary {
 	expected = "can't use space character";
 	ExtentTest logger = extent.createTest("Test Empty Keyword Dictionary");
 	try {
-	    WebElement btnDictionary,btnAdd,submit;
 	    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/button/span")).click();
 	    logger.log(Status.INFO, "Click Button Add Dictionary");
 	    driver.findElement(By.id("create_dictName")).sendKeys("Test Dic");
@@ -255,6 +252,7 @@ public class Dictionary {
 	    logger.log(Status.PASS, "Show message : This field is required");
 	}catch (Exception e) {
 	    logger.log(Status.FAIL, e.getMessage());
+	    Assert.fail(e.getMessage());
 	}
     }
     
@@ -268,10 +266,10 @@ public class Dictionary {
 	    driver.quit();
 	}else if(browser.equals("ie")) {
 	    try {
-		Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
-		Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+		    Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
+		    Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
 		} catch (IOException e) {
-		e.printStackTrace();
+		    e.printStackTrace();
 		}
 	}
 	extent.flush();

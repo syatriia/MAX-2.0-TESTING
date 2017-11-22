@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/20</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 15 13:10:10 ICT 2017</td>
+<td>Started on:</td><td>Wed Nov 22 09:54:51 ICT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (68 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (274 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.selenium.unittest.max.Registration.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.Registration</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method prastartTest but has not been marked @Optional or defined
-in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:248)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:286)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:547)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:150)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+<td title='com.selenium.unittest.max.ChangePassword.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
 	at org.testng.TestRunner.run(TestRunner.java:626)
@@ -100,15 +101,16 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1050349584", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1050349584'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method prastartTest but has not been marked @Optional or defined
-in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:248)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:286)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:547)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:150)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+</pre></div><a href='#' onClick='toggleBox("stack-trace407858146", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace407858146'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
 	at org.testng.TestRunner.run(TestRunner.java:626)
@@ -127,7 +129,7 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.selenium.unittest.max.Registration@146ba0ac</td></tr>
+<td>com.selenium.unittest.max.ChangePassword@31dc339b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -137,20 +139,235 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.selenium.unittest.max.Registration.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Registration</td>
+<td title='com.selenium.unittest.max.ChangePassword.startTest()'><b>startTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
 <td></td>
 <td>0</td>
-<td>com.selenium.unittest.max.Registration@146ba0ac</td></tr>
+<td>com.selenium.integrationtest.max.ChangePassword@52a86356</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.startTest()'><b>startTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.Crawler@a67c67e</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.startTest()'><b>startTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.Dictionary@78c03f1f</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.ForgotPassword@31610302</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Home@3327bd23</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.Login@3c0f93f1</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.Registration@71318ec4</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Registration@4e1d422d</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.test.Testng@21213b92</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.prastartTest()'><b>prastartTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.Topics@5ce81285</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.UpdateProfile@66480dd7</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.ChangePassword.startTest()'><b>startTest</b><br>Test class: com.selenium.unittest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.UpdateProfile@544fe44c</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Topics.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Topics</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Topics.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Topics</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Topics.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Topics</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Crawler.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.Crawler</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Crawler.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.Crawler</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Crawler.beforeTest()'><b>beforeTest</b><br>Test class: com.selenium.unittest.max.Crawler</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
 <tr>
 <td title='com.selenium.unittest.max.Registration.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Registration</td>
 <td></td>
 <td>0</td>
-<td>com.selenium.unittest.max.Registration@146ba0ac</td></tr>
+<td>com.selenium.unittest.max.Registration@4e1d422d</td></tr>
 <tr>
-<td title='com.selenium.unittest.max.Registration.getResult()'><b>getResult</b><br>Test class: com.selenium.unittest.max.Registration</td>
+<td title='com.selenium.unittest.max.Login.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Login</td>
 <td></td>
 <td>0</td>
-<td>com.selenium.unittest.max.Registration@146ba0ac</td></tr>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.beforeMethod()'><b>beforeMethod</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.test.Testng.beforeMethod()'><b>beforeMethod</b><br>Test class: com.test.Testng</td>
+<td></td>
+<td>0</td>
+<td>com.test.Testng@21213b92</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.ChangePassword@52a86356</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.ChangePassword@31dc339b</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.finish()'><b>finish</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.ForgotPassword@31610302</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.finish()'><b>finish</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Home@3327bd23</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.finish()'><b>finish</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.Login@3c0f93f1</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.finish()'><b>finish</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.Registration@71318ec4</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Registration@4e1d422d</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.afterTest()'><b>afterTest</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.test.Testng@21213b92</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.getResult()'><b>getResult</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td></td>
+<td>0</td>
+<td>com.selenium.unittest.max.UpdateProfile@66480dd7</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -160,15 +377,16 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.selenium.unittest.max.Registration.emptyFirstname()'><b>emptyFirstname</b><br>Test class: com.selenium.unittest.max.Registration</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method prastartTest but has not been marked @Optional or defined
-in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:248)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:286)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:547)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:150)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+<td title='com.selenium.unittest.max.Topics.emptyBrandKeywordTopicsProductReview()'><b>emptyBrandKeywordTopicsProductReview</b><br>Test class: com.selenium.unittest.max.Topics</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
 	at org.testng.TestRunner.run(TestRunner.java:626)
@@ -185,15 +403,16 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1033490990", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1033490990'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method prastartTest but has not been marked @Optional or defined
-in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:248)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:286)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:547)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:150)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2048425748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2048425748'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
 	at org.testng.TestRunner.run(TestRunner.java:626)
@@ -212,17 +431,18 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.selenium.unittest.max.Registration@146ba0ac</td></tr>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
 <tr>
-<td title='com.selenium.unittest.max.Registration.emptyLastname()'><b>emptyLastname</b><br>Test class: com.selenium.unittest.max.Registration</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method prastartTest but has not been marked @Optional or defined
-in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:248)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:286)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:547)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:150)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+<td title='com.selenium.unittest.max.Registration.emptyEmail()'><b>emptyEmail</b><br>Test class: com.selenium.unittest.max.Registration</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
 	at org.testng.TestRunner.run(TestRunner.java:626)
@@ -239,15 +459,16 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1585787493", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1585787493'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeTest on method prastartTest but has not been marked @Optional or defined
-in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:248)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:286)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:547)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:150)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1484594489", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1484594489'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
 	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
 	at org.testng.TestRunner.run(TestRunner.java:626)
@@ -266,7 +487,1015 @@ in C:\Users\Syatria\AppData\Local\Temp\testng-eclipse--31126038\testng-customsui
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.selenium.unittest.max.Registration@146ba0ac</td></tr>
+<td>com.selenium.unittest.max.Registration@4e1d422d</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.emptyEmailForgotPass()'><b>emptyEmailForgotPass</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1538399081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1538399081'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Crawler.emptyKeyword()'><b>emptyKeyword</b><br>Test class: com.selenium.unittest.max.Crawler</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace917819120", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace917819120'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.emptyKeywordDic()'><b>emptyKeywordDic</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace699780352", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace699780352'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Topics.emptyKeywordTopicsProductReview()'><b>emptyKeywordTopicsProductReview</b><br>Test class: com.selenium.unittest.max.Topics</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1373810119", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1373810119'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.emptyNameDictionary()'><b>emptyNameDictionary</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1897115967", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1897115967'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Crawler.emptyNameSource()'><b>emptyNameSource</b><br>Test class: com.selenium.unittest.max.Crawler</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace438135304", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace438135304'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.emptyPassword()'><b>emptyPassword</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace951880373", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace951880373'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Crawler.emptySource()'><b>emptySource</b><br>Test class: com.selenium.unittest.max.Crawler</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace662736689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace662736689'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Crawler@5ec0a365</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Topics.emptySourceTopicsProductReview()'><b>emptySourceTopicsProductReview</b><br>Test class: com.selenium.unittest.max.Topics</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace592688102", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace592688102'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Topics@2038ae61</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.emptyUsername()'><b>emptyUsername</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace601008104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace601008104'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.invalidEmailForgotPass()'><b>invalidEmailForgotPass</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace648525677", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace648525677'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Home.linkRegister()'><b>linkRegister</b><br>Test class: com.selenium.unittest.max.Home</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1123629720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1123629720'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Home@3327bd23</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Home.linkSignIn()'><b>linkSignIn</b><br>Test class: com.selenium.unittest.max.Home</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace205962452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace205962452'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Home@3327bd23</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.nameDictionaryMoreThan255()'><b>nameDictionaryMoreThan255</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1121453612", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1121453612'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Login.showFormEmailForgotPassword()'><b>showFormEmailForgotPassword</b><br>Test class: com.selenium.unittest.max.Login</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2095490653", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2095490653'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Login@4fe3c938</td></tr>
+<tr>
+<td title='com.selenium.unittest.max.Dictionary.spaceKeywordDic()'><b>spaceKeywordDic</b><br>Test class: com.selenium.unittest.max.Dictionary</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace213193302", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace213193302'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.unittest.max.Dictionary@5383967b</td></tr>
+<tr>
+<td title='com.test.Testng.test1()'><b>test1</b><br>Test class: com.test.Testng</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace632249781", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace632249781'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.test.Testng@21213b92</td></tr>
+<tr>
+<td title='com.selenium.integrationtest.max.ChangePassword.validChangePass()'><b>validChangePass</b><br>Test class: com.selenium.integrationtest.max.ChangePassword</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1540270363", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1540270363'><pre>java.lang.NullPointerException
+	at com.selenium.unittest.max.ChangePassword.beforeTest(ChangePassword.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:658)
+	at org.testng.TestRunner.run(TestRunner.java:626)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.selenium.integrationtest.max.ChangePassword@52a86356</td></tr>
 </table><p>
 </body>
 </html>
