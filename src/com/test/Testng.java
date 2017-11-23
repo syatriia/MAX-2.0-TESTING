@@ -51,28 +51,30 @@ public class Testng {
 	fpurl = new FileProperties("url.properties");
 	fpdriver = new FileProperties("driver.properties");
 	fppathreport = new FileProperties("pathreport.properties");
-	url = fpurl.getProperties("finalurl");
-	pathReport = fppathreport.getProperties("unitpathlog");
-	pathDriver =  fpdriver.getProperties("chromedriver");
-	typeDriver = fpdriver.getProperties("chromewebdriver");
-	if(browser.equals("chrome")) {
-	    typeDriver =  fpdriver.getProperties("chromewebdriver");
-	    pathDriver = fpdriver.getProperties("pathchromedriver");
-	    System.setProperty(typeDriver,pathDriver);
-	    driver =  new ChromeDriver();
-	    driver.manage().window().maximize();
-	}else if(browser.equals("firefox")) {
-	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
-	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
-	    System.setProperty(typeDriver,pathDriver);
-	    driver = new FirefoxDriver();
-	}else if(browser.equals("ie")) {
-	    typeDriver =  fpdriver.getProperties("iewebdriver");
-	    pathDriver = fpdriver.getProperties("pathiedriver");
-	    System.setProperty(typeDriver,pathDriver);
-	    driver = new InternetExplorerDriver();
-	}
-	wait = new WebDriverWait(driver, 10);
+	System.out.println(fpurl.getProperties("finalurl"));
+	System.out.println(fppathreport.getProperties("unitpathlog"));
+//	url = fpurl.getProperties("finalurl");
+//	pathReport = fppathreport.getProperties("unitpathlog");
+//	pathDriver =  fpdriver.getProperties("chromedriver");
+//	typeDriver = fpdriver.getProperties("chromewebdriver");
+//	if(browser.equals("chrome")) {
+//	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+//	    pathDriver = fpdriver.getProperties("pathchromedriver");
+//	    System.setProperty(typeDriver,pathDriver);
+//	    driver =  new ChromeDriver();
+//	    driver.manage().window().maximize();
+//	}else if(browser.equals("firefox")) {
+//	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
+//	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
+//	    System.setProperty(typeDriver,pathDriver);
+//	    driver = new FirefoxDriver();
+//	}else if(browser.equals("ie")) {
+//	    typeDriver =  fpdriver.getProperties("iewebdriver");
+//	    pathDriver = fpdriver.getProperties("pathiedriver");
+//	    System.setProperty(typeDriver,pathDriver);
+//	    driver = new InternetExplorerDriver();
+//	}
+//	wait = new WebDriverWait(driver, 10);
     }
     
     @BeforeMethod
@@ -82,22 +84,22 @@ public class Testng {
     
     @Test
     public void test1() throws InterruptedException{
-	 driver.get("https://www.google.com/gmail/");
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("identifierId"))).sendKeys("20okta123789@gmail.com");
-         driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/content/span")).click();
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input"))).sendKeys("barkerz891993");
-         driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/content/span")).click();
-         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("gbqfq"))).sendKeys("Mata no-reply");;
-         List<WebElement> email = driver.findElements(By.cssSelector("div.yW>span"));
-         for(WebElement emailsub : email){
-             System.out.println(emailsub.getText());
-             if(emailsub.getText().equals("MATA no-reply") == true){
-        	 emailsub.click();
-        	 driver.findElement(By.xpath("//*[@id=\":k8\"]/a"));
-        	 System.out.println(driver.getCurrentUrl());
-                 break;
-             }
-         }
+//	 driver.get("https://www.google.com/gmail/");
+//         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("identifierId"))).sendKeys("20okta123789@gmail.com");
+//         driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/content/span")).click();
+//         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input"))).sendKeys("barkerz891993");
+//         driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/content/span")).click();
+//         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("gbqfq"))).sendKeys("Mata no-reply");;
+//         List<WebElement> email = driver.findElements(By.cssSelector("div.yW>span"));
+//         for(WebElement emailsub : email){
+//             System.out.println(emailsub.getText());
+//             if(emailsub.getText().equals("MATA no-reply") == true){
+//        	 emailsub.click();
+//        	 driver.findElement(By.xpath("//*[@id=\":k8\"]/a"));
+//        	 System.out.println(driver.getCurrentUrl());
+//                 break;
+//             }
+//         }
     }
 
     @Parameters("browser")
