@@ -51,30 +51,28 @@ public class Testng {
 	fpurl = new FileProperties("url.properties");
 	fpdriver = new FileProperties("driver.properties");
 	fppathreport = new FileProperties("pathreport.properties");
-	System.out.println(fpurl.getProperties("finalurl"));
-	System.out.println(fppathreport.getProperties("unitpathlog"));
-//	url = fpurl.getProperties("finalurl");
-//	pathReport = fppathreport.getProperties("unitpathlog");
-//	pathDriver =  fpdriver.getProperties("chromedriver");
-//	typeDriver = fpdriver.getProperties("chromewebdriver");
-//	if(browser.equals("chrome")) {
-//	    typeDriver =  fpdriver.getProperties("chromewebdriver");
-//	    pathDriver = fpdriver.getProperties("pathchromedriver");
-//	    System.setProperty(typeDriver,pathDriver);
-//	    driver =  new ChromeDriver();
-//	    driver.manage().window().maximize();
-//	}else if(browser.equals("firefox")) {
-//	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
-//	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
-//	    System.setProperty(typeDriver,pathDriver);
-//	    driver = new FirefoxDriver();
-//	}else if(browser.equals("ie")) {
-//	    typeDriver =  fpdriver.getProperties("iewebdriver");
-//	    pathDriver = fpdriver.getProperties("pathiedriver");
-//	    System.setProperty(typeDriver,pathDriver);
-//	    driver = new InternetExplorerDriver();
-//	}
-//	wait = new WebDriverWait(driver, 10);
+	url = fpurl.getProperties("finalurl");
+	pathReport = fppathreport.getProperties("unitpathlog");
+	pathDriver =  fpdriver.getProperties("chromedriver");
+	typeDriver = fpdriver.getProperties("chromewebdriver");
+	if(browser.equals("chrome")) {
+	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+	    pathDriver = fpdriver.getProperties("pathchromedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver =  new ChromeDriver();
+	    driver.manage().window().maximize();
+	}else if(browser.equals("firefox")) {
+	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
+	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new FirefoxDriver();
+	}else if(browser.equals("ie")) {
+	    typeDriver =  fpdriver.getProperties("iewebdriver");
+	    pathDriver = fpdriver.getProperties("pathiedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new InternetExplorerDriver();
+	}
+	wait = new WebDriverWait(driver, 10);
     }
     
     @BeforeMethod

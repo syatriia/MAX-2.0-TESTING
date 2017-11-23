@@ -28,13 +28,13 @@
     </plugins>
   </build>
   <dependencies>
-	<dependency>
+	<!-- <dependency>
     	<groupId>com.example</groupId>
     	<artifactId>fileutil</artifactId>
     	<version>1.0</version>
     	<scope>system</scope>
     	<systemPath>${basedir}/lib/max-file-util.jar</systemPath>
-  	</dependency>
+  	</dependency> -->
 	<dependency>
     	<groupId>org.seleniumhq.selenium</groupId>
     	<artifactId>selenium-java</artifactId>
