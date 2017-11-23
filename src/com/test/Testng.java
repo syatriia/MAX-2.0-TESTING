@@ -58,6 +58,7 @@ public class Testng {
 	    System.setProperty(typeDriver,webDriver);
 	    driver =  new FirefoxDriver();
 	}else if(browser.equalsIgnoreCase("chrome")) {
+	    System.out.println("XXXXXXXXXXX");
 	    typeDriver = fpdriver.getProperties("chromewebdriver");
 	    webDriver = fpdriver.getProperties("pathchromedriver");
 	    System.out.println(typeDriver+"x"+webDriver);
