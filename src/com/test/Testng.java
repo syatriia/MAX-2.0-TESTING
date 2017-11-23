@@ -37,8 +37,8 @@ import com.summit.util.file.FileProperties;
 public class Testng {
 
     
-    FileProperties fpurl,fpdriver,fpreport;
-    String url,pathReport,typeDriver,webDriver,pathworkspace;
+    FileProperties fpurl,fppathreport,fpdriver;
+    String pathReport,url,typeDriver,pathDriver,actual,expected;
     WebDriver driver;
     WebDriverWait wait;
     ExtentHtmlReporter htmlReporter;
@@ -48,29 +48,29 @@ public class Testng {
     @Parameters("browser")
     @BeforeTest
     public void prastartTest(String browser) {
-	pathworkspace = System.getProperty("user.dir")+"\\webdriver\\";
 	fpurl = new FileProperties("url.properties");
-	fpdriver =  new FileProperties("driver.properties");
-	fpreport = new FileProperties("pathreport.properties");
-	if(browser.equalsIgnoreCase("firefox")) {
-	    typeDriver = fpdriver.getProperties("firefoxwebdriver");
-	    webDriver = fpdriver.getProperties("pathfirefoxdriver");
-	    System.setProperty(typeDriver,webDriver);
-	    driver =  new FirefoxDriver();
-	}else if(browser.equalsIgnoreCase("chrome")) {
-	    System.out.println("XXXXXXXXXXX");
-	    typeDriver = fpdriver.getProperties("chromewebdriver");
-	    webDriver = fpdriver.getProperties("pathchromedriver");
-	    System.out.println(typeDriver+"x"+webDriver);
-	    System.setProperty(typeDriver,webDriver);
-//	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\chromedriver.exe");
+	fpdriver = new FileProperties("driver.properties");
+	fppathreport = new FileProperties("pathreport.properties");
+	url = fpurl.getProperties("finalurl");
+	pathReport = fppathreport.getProperties("unitpathlog");
+	pathDriver =  fpdriver.getProperties("chromedriver");
+	typeDriver = fpdriver.getProperties("chromewebdriver");
+	if(browser.equals("chrome")) {
+	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+	    pathDriver = fpdriver.getProperties("pathchromedriver");
+	    System.setProperty(typeDriver,pathDriver);
 	    driver =  new ChromeDriver();
 	    driver.manage().window().maximize();
-	}else if(browser.equalsIgnoreCase("ie")) {
-	    typeDriver = fpdriver.getProperties("iewebdriver");
-	    webDriver = fpdriver.getProperties("pathiedriver");
-	    System.setProperty(typeDriver,webDriver);
-	    driver =  new InternetExplorerDriver();
+	}else if(browser.equals("firefox")) {
+	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
+	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new FirefoxDriver();
+	}else if(browser.equals("ie")) {
+	    typeDriver =  fpdriver.getProperties("iewebdriver");
+	    pathDriver = fpdriver.getProperties("pathiedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new InternetExplorerDriver();
 	}
 	wait = new WebDriverWait(driver, 10);
     }
