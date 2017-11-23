@@ -13,9 +13,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -30,55 +36,75 @@ import com.summit.util.file.FileProperties;
  */
 public class ForgotPassword {
     
-    FileProperties fp;
-    String url,pathReport,typeDriver,webdriver;
+    FileProperties fpurl,fppathreport,fpdriver;
+    String pathReport,url,typeDriver,pathDriver,actual,expected;
     WebDriver driver;
+    WebDriverWait wait;
     ExtentHtmlReporter htmlReporter;
     ExtentReports extent;
-    SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd hh.mm");
+    SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd hh.mm");
     
-    public ForgotPassword() {
-	fp = new FileProperties("url.properties");
-	url = fp.getProperties("finalurl");
-	pathReport = fp.getProperties("integrationpathlog");
-	typeDriver =  fp.getProperties("chromedriver");
-	webdriver = fp.getProperties("chromewebdriver");
-    }
-    
+    @Parameters("browser")
     @BeforeTest
-    public void prastartTest() throws InterruptedException {
+    public void beforeTest(String browser) {
+	fpurl = new FileProperties("url.properties");
+	fpdriver = new FileProperties("driver.properties");
+	fppathreport = new FileProperties("pathreport.properties");
+	url = fpurl.getProperties("finalurl");
+	pathReport = fppathreport.getProperties("unitpathlog");
+	pathDriver =  fpdriver.getProperties("chromedriver");
+	typeDriver = fpdriver.getProperties("chromewebdriver");
+	if(browser.equals("chrome")) {
+	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+	    pathDriver = fpdriver.getProperties("pathchromedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver =  new ChromeDriver();
+	    driver.manage().window().maximize();
+	}else if(browser.equals("firefox")) {
+	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
+	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new FirefoxDriver();
+	}else if(browser.equals("ie")) {
+	    typeDriver =  fpdriver.getProperties("iewebdriver");
+	    pathDriver = fpdriver.getProperties("pathiedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new InternetExplorerDriver();
+	}
+	
 	File file = new File(pathReport);
 	if(!file.exists()) {
 	    file.mkdirs();
 	}
 	htmlReporter = new ExtentHtmlReporter(pathReport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
-        System.setProperty(webdriver,typeDriver);
-	driver =  new ChromeDriver();
-	driver.manage().window().maximize();
+	wait = new WebDriverWait(driver, 10);
+
 	extent = new ExtentReports();
 	extent.attachReporter(htmlReporter);
-	 
+
+    }
+    
+    
+    @BeforeMethod
+    public void beforeMethod() {
+	driver.get(url+"login");
     }
 
+    @Test
     public void sendMailForgotPassword() {
 	ExtentTest logger = extent.createTest("Test Send email forgot password");
-	logger.log(Status.INFO, "Browser Launched");
-	driver.get(url+"login");
-	logger.log(Status.INFO, "Navigated to login page");
- 	try {
- 	  WebElement forgotPassword,form,submit;
- 	  forgotPassword = driver.findElement(By.xpath("//form[@id='loginForm']/div[3]/div[2]/div/a"));
-          forgotPassword.click();    
-         
-          form = driver.findElement(By.id("email-recovery"));
-          form.sendKeys("testemail.com");
+ 	expected = "An email has been sent to reset your password.";
+	try {
+ 	  WebElement form;
+ 	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@id='loginForm']/div[3]/div[2]/div/a"))).click();      
+          form = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email-recovery")));
+          form.sendKeys("20okta123789@gmail.com");
           logger.log(Status.INFO, form.getAttribute("value")+" is insert in filed email forgot password ");
-          submit = driver.findElement(By.id("btnRecover"));
-          submit.click();
+          driver.findElement(By.id("btnRecover")).click();
           logger.log(Status.INFO, "Click button submit");
+          actual = driver.findElement(By.xpath("//div[@id='recover-div']/label")).getText();
+          assertEquals(actual, expected);
          
-          String message = driver.findElement(By.xpath("//div[@id='recover-div']/label")).getText();
-          assertEquals(message, "An email has been sent to reset your password.");
  	}catch (AssertionError e) {
  	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
  	    Assert.fail(e.getMessage());
@@ -88,11 +114,11 @@ public class ForgotPassword {
 	}
     }
     
-    @AfterTest
-    public void finish() {
-	driver.close();
-	driver.quit();
-	extent.flush();
-    }
-    
+//    @AfterTest
+//    public void finish() {
+//	driver.close();
+//	driver.quit();
+//	extent.flush();
+//    }
+//    
 }

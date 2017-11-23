@@ -7,9 +7,12 @@ package com.test;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -76,7 +79,22 @@ public class Testng {
     
     @Test
     public void test1() throws InterruptedException{
-
+	 driver.get("https://www.google.com/gmail/");
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("identifierId"))).sendKeys("20okta123789@gmail.com");
+         driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/content/span")).click();
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input"))).sendKeys("barkerz891993");
+         driver.findElement(By.xpath("//*[@id=\"passwordNext\"]/content/span")).click();
+         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("gbqfq"))).sendKeys("Mata no-reply");;
+         List<WebElement> email = driver.findElements(By.cssSelector("div.yW>span"));
+         for(WebElement emailsub : email){
+             System.out.println(emailsub.getText());
+             if(emailsub.getText().equals("MATA no-reply") == true){
+        	 emailsub.click();
+        	 driver.findElement(By.xpath("//*[@id=\":k8\"]/a"));
+        	 System.out.println(driver.getCurrentUrl());
+                 break;
+             }
+         }
     }
 
     @Parameters("browser")

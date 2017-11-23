@@ -90,7 +90,7 @@ public class ChangePassword {
 	WebElement username,password,submit;
 	username = driver.findElement(By.id("username"));
 	password = driver.findElement(By.id("password"));
-	username.sendKeys("syatriia");
+	username.sendKeys("syatria");
 	password.sendKeys("11syatriia");
 	
 	submit = driver.findElement(By.xpath("//button[@onclick='submitForm()']"));

@@ -1,17 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test - Suite" parallel="tests">
- 	<test name="firefox" parallel="classes">
+<!--  	<test name="firefox" parallel="classes">
 	 <parameter name="browser" value="firefox"  />
 		<classes>
 			<class name="com.selenium.unittest.max.Dictionary"></class>
-			<!-- <class name="com.selenium.unittest.max.Crawler"></class>
-			<class name="com.selenium.unittest.max.Registration"></class> -->
+			<class name="com.selenium.unittest.max.Crawler"></class>
+			<class name="com.selenium.unittest.max.Registration"></class>
 		</classes>
-	</test>
+	</test> -->
  	<test name="chrome" parallel="classes">
 	 <parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.selenium.unittest.max.Dictionary"></class>
+			<class name="com.test.Testng"></class>
 			<!-- <class name="com.selenium.unittest.max.Crawler"></class>
 			<class name="com.selenium.unittest.max.Registration"></class> -->
 		</classes>

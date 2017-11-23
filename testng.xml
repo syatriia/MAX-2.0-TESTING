@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="com.selenium.integrationtest.max.ForgotPassword"/>
+      <class name="com.selenium.unittest.max.Home"/>
+      <class name="com.selenium.unittest.max.Login"/>
+      <class name="com.selenium.unittest.max.Registration"/>
+      <class name="com.selenium.integrationtest.max.Registration"/>
+      <class name="com.selenium.integrationtest.max.Login"/>
+      <class name="com.selenium.integrationtest.max.ChangePassword"/>
+      <class name="com.selenium.unittest.max.Dictionary"/>
+      <class name="com.selenium.unittest.max.UpdateProfile"/>
+      <class name="com.selenium.integrationtest.max.UpdateProfile"/>
+      <class name="com.selenium.unittest.max.Crawler"/>
+      <class name="com.test.Testng"/>
+      <class name="com.selenium.unittest.max.ChangePassword"/>
+      <class name="com.selenium.unittest.max.Topics"/>
+      <class name="com.selenium.integrationtest.max.Topics"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
