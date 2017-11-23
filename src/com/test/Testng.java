@@ -58,10 +58,11 @@ public class Testng {
 	    System.setProperty(typeDriver,webDriver);
 	    driver =  new FirefoxDriver();
 	}else if(browser.equalsIgnoreCase("chrome")) {
-//	    typeDriver = fpdriver.getProperties("chromewebdriver");
-//	    webDriver = pathworkspace+fpdriver.getProperties("pathchromedriver");
-//	    System.setProperty(typeDriver,webDriver);
-	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\chromedriver.exe");
+	    typeDriver = fpdriver.getProperties("chromewebdriver");
+	    webDriver = fpdriver.getProperties("pathchromedriver");
+	    System.out.println(typeDriver+"x"+webDriver);
+	    System.setProperty(typeDriver,webDriver);
+//	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\chromedriver.exe");
 	    driver =  new ChromeDriver();
 	    driver.manage().window().maximize();
 	}else if(browser.equalsIgnoreCase("ie")) {
