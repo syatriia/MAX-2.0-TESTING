@@ -38,7 +38,7 @@ public class Testng {
 
     
     FileProperties fpurl,fpdriver,fpreport;
-    String url,pathReport,typeDriver,webDriver;
+    String url,pathReport,typeDriver,webDriver,pathworkspace;
     WebDriver driver;
     WebDriverWait wait;
     ExtentHtmlReporter htmlReporter;
@@ -48,21 +48,20 @@ public class Testng {
     @Parameters("browser")
     @BeforeTest
     public void prastartTest(String browser) {
+	pathworkspace = System.getProperty("user.dir")+"\\webdriver\\";
 	fpurl = new FileProperties("url.properties");
 	fpdriver =  new FileProperties("driver.properties");
 	fpreport = new FileProperties("pathreport.properties");
 	if(browser.equalsIgnoreCase("firefox")) {
 	    typeDriver = fpdriver.getProperties("firefoxwebdriver");
 	    webDriver = fpdriver.getProperties("pathfirefoxdriver");
-	    System.out.println("ok"+typeDriver+webDriver);
 	    System.setProperty(typeDriver,webDriver);
 	    driver =  new FirefoxDriver();
 	}else if(browser.equalsIgnoreCase("chrome")) {
-	    System.out.println(browser);
-	    System.out.println(fpdriver.getProperties("chromewebdriver"));
-	    typeDriver = fpdriver.getProperties("chromewebdriver");
-	    webDriver = fpdriver.getProperties("pathchromedriver");
-	    System.setProperty(typeDriver,webDriver);
+//	    typeDriver = fpdriver.getProperties("chromewebdriver");
+//	    webDriver = pathworkspace+fpdriver.getProperties("pathchromedriver");
+//	    System.setProperty(typeDriver,webDriver);
+	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\chromedriver.exe");
 	    driver =  new ChromeDriver();
 	    driver.manage().window().maximize();
 	}else if(browser.equalsIgnoreCase("ie")) {
