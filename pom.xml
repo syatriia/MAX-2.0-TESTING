@@ -20,8 +20,8 @@
     <version>2.20.1</version>
     <configuration>
      <suiteXmlFiles>
-      <!-- <suiteXmlFile>test.xml</suiteXmlFile> -->
-      <suiteXmlFile>testMultipleBrowserLogin.xml</suiteXmlFile>
+      <suiteXmlFile>test.xml</suiteXmlFile>
+      <!-- <suiteXmlFile>testMultipleBrowserLogin.xml</suiteXmlFile> -->
      </suiteXmlFiles>
     </configuration>
    </plugin>
