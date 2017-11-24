@@ -5,6 +5,7 @@ package com.test;
 
 
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -57,10 +58,12 @@ public class Testng {
 //	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 //	    pathDriver = fpdriver.getProperties("pathchromedriver");
 //	    System.setProperty(typeDriver,pathDriver);
-	    System.out.println(System.getProperty("user.dir"));
+//	    System.out.println(System.getProperty("user.dir"));
+	    File folder = new File(System.getProperty("user.dir"));
+	    listFilesForFolder(folder);
 //	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\"+"chromedriver.exe");
-	    driver =  new ChromeDriver();
-	    driver.manage().window().maximize();
+//	    driver =  new ChromeDriver();
+//	    driver.manage().window().maximize();
 	}else if(browser.equals("firefox")) {
 	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
 	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
@@ -75,6 +78,20 @@ public class Testng {
 	}
 	wait = new WebDriverWait(driver, 10);
     }
+    
+
+
+    public void listFilesForFolder(final File folder) {
+	for (final File fileEntry : folder.listFiles()) {
+	    if (fileEntry.isDirectory()) {
+		listFilesForFolder(fileEntry);
+	    } else {
+		System.out.println(fileEntry.getName());
+	    }
+	}
+    }
+
+    
     
     @BeforeMethod
     public void beforeMethod() {
