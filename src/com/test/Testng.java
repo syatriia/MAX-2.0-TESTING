@@ -54,9 +54,10 @@ public class Testng {
 	url = fpurl.getProperties("finalurl");
 //	pathReport = fppathreport.getProperties("unitpathlog");
 	if(browser.equals("chrome")) {
-	    typeDriver =  fpdriver.getProperties("chromewebdriver");
-	    pathDriver = fpdriver.getProperties("pathchromedriver");
-	    System.setProperty(typeDriver,pathDriver);
+//	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+//	    pathDriver = fpdriver.getProperties("pathchromedriver");
+//	    System.setProperty(typeDriver,pathDriver);
+	    System.out.println(System.getProperty("user.dir"));
 //	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\"+"chromedriver.exe");
 	    driver =  new ChromeDriver();
 	    driver.manage().window().maximize();
