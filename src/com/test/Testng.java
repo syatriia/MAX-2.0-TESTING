@@ -51,7 +51,7 @@ public class Testng {
 	fpurl = new FileProperties("url.properties");
 	fpdriver = new FileProperties("driver.properties");
 	fppathreport = new FileProperties("pathreport.properties");
-	url = fpurl.getProperties("finalurl");
+//	url = fpurl.getProperties("finalurl");
 //	pathReport = fppathreport.getProperties("unitpathlog");
 	if(browser.equals("chrome")) {
 //	    typeDriver =  fpdriver.getProperties("chromewebdriver");
