@@ -51,13 +51,13 @@ public class Testng {
 	fpurl = new FileProperties("url.properties");
 	fpdriver = new FileProperties("driver.properties");
 	fppathreport = new FileProperties("pathreport.properties");
-//	url = fpurl.getProperties("finalurl");
+	url = fpurl.getProperties("finalurl");
 //	pathReport = fppathreport.getProperties("unitpathlog");
 	if(browser.equals("chrome")) {
-//	    typeDriver =  fpdriver.getProperties("chromewebdriver");
-//	    pathDriver = fpdriver.getProperties("pathchromedriver");
-//	    System.setProperty(typeDriver,pathDriver);
-	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\"+"chromedriver.exe");
+	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+	    pathDriver = fpdriver.getProperties("pathchromedriver");
+	    System.setProperty(typeDriver,pathDriver);
+//	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\"+"chromedriver.exe");
 	    driver =  new ChromeDriver();
 	    driver.manage().window().maximize();
 	}else if(browser.equals("firefox")) {
@@ -77,7 +77,7 @@ public class Testng {
     
     @BeforeMethod
     public void beforeMethod() {
-
+	driver.get(url);
     }
     
     @Test
