@@ -6,9 +6,12 @@ package com.test;
 
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -55,12 +58,24 @@ public class Testng {
 //	url = fpurl.getProperties("finalurl");
 //	pathReport = fppathreport.getProperties("unitpathlog");
 	if(browser.equals("chrome")) {
+	    Properties p = new Properties();
+	    try {
+		p.load(new FileInputStream(System.getProperty("user.dir")+"\\resources\\"+"driver.properties"));
+	    } catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	    } catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	    }
+	    p.list(System.out);
+	    
 //	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 //	    pathDriver = fpdriver.getProperties("pathchromedriver");
 //	    System.setProperty(typeDriver,pathDriver);
 //	    System.out.println(System.getProperty("user.dir"));
-	    File folder = new File(System.getProperty("user.dir"));
-	    listFilesForFolder(folder);
+//	    File folder = new File(System.getProperty("user.dir"));
+//	    listFilesForFolder(folder);
 //	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\"+"chromedriver.exe");
 //	    driver =  new ChromeDriver();
 //	    driver.manage().window().maximize();
