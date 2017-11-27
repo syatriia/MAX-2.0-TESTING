@@ -4,6 +4,7 @@
 package com.selenium.integrationtest.max;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -15,9 +16,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -40,13 +43,13 @@ public class Dictionary {
     @Parameters("browser")
     @BeforeTest
     public void beforeTest(String browser) {
-	fpurl = new FileProperties("url.properties");
-	fpdriver = new FileProperties("driver.properties");
-	fppathreport = new FileProperties("pathreport.properties");
-	url = fpurl.getProperties("devurl");
-	pathReport = fppathreport.getProperties("unitpathlog");
-	pathDriver =  fpdriver.getProperties("chromedriver");
-	typeDriver = fpdriver.getProperties("chromewebdriver");
+	String path = System.getProperty("user.dir")+"\\resources\\";
+	fpurl = new FileProperties(path+"url.properties");
+	fpdriver = new FileProperties(path+"driver.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
+	url = fpurl.getProperties("finalurl");
+	pathReport = fppathreport.getProperties("integrationpathlog");
+	
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");
@@ -91,6 +94,39 @@ public class Dictionary {
     public void beforeMethod() {
 	driver.get("http://max.mataprima.com/dev/admin/dictionary");
     }
+    
+    @Test
+    public void createDictionary() {
+	
+    }
+    
+    @Test
+    public void checkListDictionary() {
+	
+    }
+    
+    @Test
+    public void deleteDictionary() {
+	
+    }
 
+    @Parameters("browser")
+    @AfterTest
+    public void getResult(String browser) {
+	if(browser.equals("chrome")) {
+	    driver.close();
+	    driver.quit();
+	}else if(browser.equals("firefox")) {
+	    driver.quit();
+	}else if(browser.equals("ie")) {
+	    try {
+		Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
+		Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+	}
+	extent.flush();
+    }
     
 }

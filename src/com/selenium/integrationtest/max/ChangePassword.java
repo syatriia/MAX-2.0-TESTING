@@ -6,6 +6,7 @@ package com.selenium.integrationtest.max;
 import static org.testng.Assert.assertEquals;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -46,9 +47,10 @@ public class ChangePassword {
     @Parameters("browser")
     @BeforeTest
     public void beforeTest(String browser) {
-	fpurl = new FileProperties("url.properties");
-	fpdriver = new FileProperties("driver.properties");
-	fppathreport = new FileProperties("pathreport.properties");
+	String path = System.getProperty("user.dir")+"\\resources\\";
+	fpurl = new FileProperties(path+"url.properties");
+	fpdriver = new FileProperties(path+"driver.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
 	url = fpurl.getProperties("finalurl");
 	pathReport = fppathreport.getProperties("integrationpathlog");
 	pathDriver =  fpdriver.getProperties("chromedriver");
@@ -138,10 +140,22 @@ public class ChangePassword {
 	}
     }
     
+    @Parameters("browser")
     @AfterTest
-    public void getResult() {
-	driver.close();
-	driver.quit();
+    public void getResult(String browser) {
+	if(browser.equals("chrome")) {
+	    driver.close();
+	    driver.quit();
+	}else if(browser.equals("firefox")) {
+	    driver.quit();
+	}else if(browser.equals("ie")) {
+	    try {
+		Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
+		Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+		} catch (IOException e) {
+		e.printStackTrace();
+		}
+	}
 	extent.flush();
     }
 

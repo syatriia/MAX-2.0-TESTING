@@ -6,6 +6,7 @@ package com.selenium.integrationtest.max;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -43,13 +44,12 @@ public class Login {
     @Parameters("browser")
     @BeforeTest
     public void beforeTest(String browser) {
-	fpurl = new FileProperties("url.properties");
-	fpdriver = new FileProperties("driver.properties");
-	fppathreport = new FileProperties("pathreport.properties");
+	String path = System.getProperty("user.dir")+"\\resources\\";
+	fpurl = new FileProperties(path+"url.properties");
+	fpdriver = new FileProperties(path+"driver.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
 	url = fpurl.getProperties("finalurl");
-	pathReport = fppathreport.getProperties("unitpathlog");
-	pathDriver =  fpdriver.getProperties("chromedriver");
-	typeDriver = fpdriver.getProperties("chromewebdriver");
+	pathReport = fppathreport.getProperties("integrationpathlog");	
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");
@@ -88,7 +88,7 @@ public class Login {
     
     @Test(priority=1)
     public void invalidLogin() {
-	expected = "";
+	expected = url+"login";
 	ExtentTest logger = extent.createTest("Test inValid Login");
 	try {
 	    WebElement username,password;
@@ -100,23 +100,17 @@ public class Login {
 //	    logger.log(Status.INFO, "Click button Login");
        	    assertTrue(driver.getCurrentUrl().equals(url+"login"));
       	    logger.log(Status.PASS, "Test Pass: User is not login");
-       	}catch (AssertionError e) {
-//       	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
-//       	    Assert.fail();
        	} catch (Exception e) {
-//	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
-//	    Assert.fail();
+	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
+	    Assert.fail();
 	}
     }
 
-//   
-    
     @Test(priority=2)
     public void validLogin() {
-//	String message = "";
-//	ExtentTest logger = extent.createTest("Test valid Login");
+	expected = url+"admin";
+	ExtentTest logger = extent.createTest("Test valid Login");
 //	logger.info("Browser Launched");
-	driver.get(url+"login");
 	try {
 //	    logger.log(Status.INFO, "Navigated to login page");
 	    WebElement username,password,submit;
@@ -132,21 +126,30 @@ public class Login {
 //	    logger.log(Status.INFO, "Click button Login");
 	    Thread.sleep(1000);
 	    assertTrue(driver.getCurrentUrl().equals(url+"admin/"));
-//       	    logger.log(Status.PASS, "Test Pass: Sucess Login");
-       	}catch (AssertionError e) {
-//       	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
-//       	    Assert.fail();
+//	    logger.log(Status.PASS, "Test Pass: Sucess Login");
        	} catch (Exception e) {
 //	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
 //	    Assert.fail();
 	}
     }
     
+    @Parameters("browser")
     @AfterTest
-    public void finish() {
-//	driver.close();
-	driver.quit();
-//	extent.flush();
+    public void getResult(String browser) {
+	if(browser.equals("chrome")) {
+	    driver.close();
+	    driver.quit();
+	}else if(browser.equals("firefox")) {
+	    driver.quit();
+	}else if(browser.equals("ie")) {
+	    try {
+		Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
+		Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+		} catch (IOException e) {
+		e.printStackTrace();
+		}
+	}
+	extent.flush();
     }
     
 }

@@ -55,28 +55,9 @@ public class Testng {
 	String path = System.getProperty("user.dir")+"\\resources\\";
 	fpurl = new FileProperties(path+"url.properties");
 	fpdriver = new FileProperties(path+"driver.properties");
-//	fppathreport = new FileProperties("pathreport.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
 	url = fpurl.getProperties("finalurl");
-//	pathReport = fppathreport.getProperties("unitpathlog");
-	System.out.println(fpurl.getProperties("finalurl"));
 	if(browser.equals("chrome")) {
-//	    Properties p = new Properties();
-//	    try {
-////		p.load(new FileInputStream(System.getProperty("user.dir")+"\\resources\\"+"driver.properties"));
-//		p.load(new FileInputStream(System.getProperty("driver.properties")));
-//	    } catch (FileNotFoundException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//	    } catch (IOException e) {
-//		// TODO Auto-generated catch block
-//		e.printStackTrace();
-//	    }
-//	    System.out.println(System.getProperty("user.dir"));
-//	    p.list(System.out);
-//	    System.out.println(System.getProperty("user.dir"));
-//	    File folder = new File(System.getProperty("user.dir"));
-//	    listFilesForFolder(folder);
-//	    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\webdriver\\"+"chromedriver.exe");
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");
 	    System.setProperty(typeDriver,pathDriver);
@@ -96,20 +77,6 @@ public class Testng {
 	}
 	wait = new WebDriverWait(driver, 10);
     }
-    
-
-
-    public void listFilesForFolder(final File folder) {
-	for (final File fileEntry : folder.listFiles()) {
-	    if (fileEntry.isDirectory()) {
-		listFilesForFolder(fileEntry);
-	    } else {
-		System.out.println(fileEntry.getName());
-	    }
-	}
-    }
-
-    
     
     @BeforeMethod
     public void beforeMethod() {

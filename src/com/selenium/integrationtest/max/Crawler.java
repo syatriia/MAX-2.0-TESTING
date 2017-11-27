@@ -20,6 +20,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -42,14 +43,12 @@ public class Crawler {
     @Parameters("browser")
     @BeforeTest
     public void beforeTest(String browser) {
-	fpurl = new FileProperties("url.properties");
-	fpdriver = new FileProperties("driver.properties");
-	fppathreport = new FileProperties("pathreport.properties");
-	url = fpurl.getProperties("devurl");
+	String path = System.getProperty("user.dir")+"\\resources\\";
+	fpurl = new FileProperties(path+"url.properties");
+	fpdriver = new FileProperties(path+"driver.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
+	url = fpurl.getProperties("finalurl");
 	pathReport = fppathreport.getProperties("integrationpathlog");
-	pathDriver =  fpdriver.getProperties("chromedriver");
-	typeDriver = fpdriver.getProperties("chromewebdriver");
-	
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");
@@ -92,6 +91,21 @@ public class Crawler {
     @BeforeMethod
     public void beforeTest() {
 	driver.get("http://max.mataprima.com/dev/admin/source");
+    }
+    
+    @Test
+    public void createCrawler() {
+	
+    }
+    
+    @Test
+    public void deleteCrawler() {
+	
+    }
+    
+    @Test
+    public void checkDetailCrawler() {
+	
     }
     
     @Parameters("browser")

@@ -47,13 +47,12 @@ public class ForgotPassword {
     @Parameters("browser")
     @BeforeTest
     public void beforeTest(String browser) {
-	fpurl = new FileProperties("url.properties");
-	fpdriver = new FileProperties("driver.properties");
-	fppathreport = new FileProperties("pathreport.properties");
+	String path = System.getProperty("user.dir")+"\\resources\\";
+	fpurl = new FileProperties(path+"url.properties");
+	fpdriver = new FileProperties(path+"driver.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
 	url = fpurl.getProperties("finalurl");
-	pathReport = fppathreport.getProperties("unitpathlog");
-	pathDriver =  fpdriver.getProperties("chromedriver");
-	typeDriver = fpdriver.getProperties("chromewebdriver");
+	pathReport = fppathreport.getProperties("integrationpathlog");	
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");
@@ -103,11 +102,7 @@ public class ForgotPassword {
           driver.findElement(By.id("btnRecover")).click();
           logger.log(Status.INFO, "Click button submit");
           actual = driver.findElement(By.xpath("//div[@id='recover-div']/label")).getText();
-          assertEquals(actual, expected);
-         
- 	}catch (AssertionError e) {
- 	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
- 	    Assert.fail(e.getMessage());
+          assertEquals(actual, expected);        
  	}catch (Exception e) {
  	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
  	    Assert.fail(e.getMessage());

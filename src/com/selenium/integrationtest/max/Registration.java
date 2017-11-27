@@ -7,6 +7,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -14,10 +15,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -32,40 +38,64 @@ import com.summit.util.file.FileProperties;
  */
 public class Registration {
 
-    FileProperties fp;
-    String url,pathReport,typeDriver,webdriver;
+
+    FileProperties fpurl,fppathreport,fpdriver;
+    String pathReport,url,typeDriver,pathDriver,actual,expected;
     WebDriver driver;
+    WebDriverWait wait;
     ExtentHtmlReporter htmlReporter;
     ExtentReports extent;
-    SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd hh.mm");
+    SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd hh.mm");
     
-    public Registration() {
-	fp = new FileProperties("url.properties");
-	url = fp.getProperties("cloudurl");
-	pathReport = fp.getProperties("integrationpathlog");
-	typeDriver =  fp.getProperties("chromedriver");
-	webdriver = fp.getProperties("chromewebdriver");
-    }
-    
+    @Parameters("browser")
     @BeforeTest
-    public void prastartTest() throws InterruptedException {
+    public void beforeTest(String browser) {
+	String path = System.getProperty("user.dir")+"\\resources\\";
+	fpurl = new FileProperties(path+"url.properties");
+	fpdriver = new FileProperties(path+"driver.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
+	url = fpurl.getProperties("finalurl");
+	pathReport = fppathreport.getProperties("integrationpathlog");	
+	if(browser.equals("chrome")) {
+	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+	    pathDriver = fpdriver.getProperties("pathchromedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver =  new ChromeDriver();
+	    driver.manage().window().maximize();
+	}else if(browser.equals("firefox")) {
+	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
+	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new FirefoxDriver();
+	}else if(browser.equals("ie")) {
+	    typeDriver =  fpdriver.getProperties("iewebdriver");
+	    pathDriver = fpdriver.getProperties("pathiedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new InternetExplorerDriver();
+	}
+	
 	File file = new File(pathReport);
 	if(!file.exists()) {
 	    file.mkdirs();
 	}
 	htmlReporter = new ExtentHtmlReporter(pathReport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
-        System.setProperty(typeDriver,webdriver);
-	driver =  new ChromeDriver();
+	wait = new WebDriverWait(driver, 10);
+
 	extent = new ExtentReports();
 	extent.attachReporter(htmlReporter);
-	 
+
+    }
+    
+    
+    @BeforeMethod
+    public void beforeMethod() {
+	driver.get(url+"register");
     }
     
     @Test(priority=1)
     public void validRegistration() {
-	driver.get(url+"register");
+	expected = "";
 	ExtentTest logger = extent.createTest("Test Valid Registration");
-	String message = "";
 	try {
 	    WebElement email,username,password,retype,phones,firstname,lastname,address,organization,next,finish;
         	
@@ -116,12 +146,8 @@ public class Registration {
 	    logger.log(Status.INFO, "Button next is clicked");
 	    finish.click();
 	    logger.log(Status.INFO, "Button Finish is clicked");
-	    message =  driver.findElement(By.tagName("h2")).getText();
-	    assertTrue(driver.getCurrentUrl().equals(url+"confirm?process=register") &&  message.equals("Thank You For Signing Up"));
-	    assertEquals(message, "Thank You For Signing Up");
-        }catch (AssertionError e) {
-            logger.log(Status.FAIL, e.getMessage());
-            Assert.fail(e.getMessage());
+	    actual =  driver.findElement(By.tagName("h2")).getText();
+	    assertEquals(actual, expected);
         }catch (Exception e) {
             logger.log(Status.FAIL, e.getMessage());
             Assert.fail(e.getMessage());
@@ -131,20 +157,15 @@ public class Registration {
     
     @Test(enabled=false)
     public void checkExisttingEmail() throws InterruptedException {
-	driver.get(url+"register");
+	expected = "";
 	ExtentTest logger = extent.createTest("Test Verify Existing Email User");
-	String message = "";
 	try {
 	    WebElement email;
 	    email = driver.findElement(By.id("email"));
 	    email.sendKeys("syatriia11@gmail.com");
 	    Thread.sleep(3000);
-	    message = driver.findElement(By.id("invalid-email")).getText();
-	    Thread.sleep(3000);
-	    assertEquals(message, "email already used");
-	}catch (AssertionError e) {
-	    logger.log(Status.FAIL, e.getMessage());
-	    Assert.fail(e.getMessage());
+	    actual = driver.findElement(By.id("email-error")).getText();
+	    assertEquals(actual, expected);
 	}catch (Exception e) {
 	    logger.log(Status.INFO, e.getMessage());
 	    Assert.fail(e.getMessage());
@@ -153,17 +174,15 @@ public class Registration {
     
     @Test(priority=2)
     public void checkExisttingUsername() throws InterruptedException {
-	driver.get(url+"register");
+
 	ExtentTest logger = extent.createTest("Test Verify Existing Username");
-	String message = "";
+	expected = "";
 	try {
 	    WebElement username;
 	    username = driver.findElement(By.id("username"));
 	    username.sendKeys("syatriia11@gmail.com");
-	    Thread.sleep(3000);
-	    message = driver.findElement(By.id("invalid-username")).getText();
-	    Thread.sleep(3000);
-	    assertEquals(message, "username already used");
+	    actual = driver.findElement(By.id("username-error")).getText();
+	    assertEquals(actual, expected);
 	}catch (AssertionError e) {
 	    logger.log(Status.FAIL, e.getMessage());
 	    Assert.fail(e.getMessage());
@@ -173,10 +192,22 @@ public class Registration {
 	}
     }
     
+    @Parameters("browser")
     @AfterTest
-    public void finish() {
-	driver.close();
-//	driver.quit();
+    public void getResult(String browser) {
+	if(browser.equals("chrome")) {
+	    driver.close();
+	    driver.quit();
+	}else if(browser.equals("firefox")) {
+	    driver.quit();
+	}else if(browser.equals("ie")) {
+	    try {
+		Runtime.getRuntime().exec("taskkill /F /IM IEDriverServer.exe");
+		Runtime.getRuntime().exec("taskkill /F /IM iexplore.exe");
+		} catch (IOException e) {
+		e.printStackTrace();
+		}
+	}
 	extent.flush();
     }
 }

@@ -16,9 +16,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -34,38 +38,48 @@ import com.summit.util.file.FileProperties;
 public class Home {
 
     
-    FileProperties fp;
-    String pathReport,url,typeDriver,webDriver;
+    FileProperties fpurl,fppathreport,fpdriver;
+    String pathReport,url,typeDriver,pathDriver,actual,expected;
     WebDriver driver;
+    WebDriverWait wait;
     ExtentHtmlReporter htmlReporter;
     ExtentReports extent;
     SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd hh.mm");
     
-    
-    
-    public Home() {
-	fp = new FileProperties("url.properties");
-	url = fp.getProperties("devurl");
-	pathReport = fp.getProperties("unitpathlog");
-	typeDriver =  fp.getProperties("chromedriver");
-	webDriver = fp.getProperties("chromewebdriver");
-    }
-    
+    @Parameters("browser")
     @BeforeTest
-    public void prastartTest() throws InterruptedException {
+    public void beforeTest(String browser) {
+	String path = System.getProperty("user.dir")+"\\resources\\";
+	fpurl = new FileProperties(path+"url.properties");
+	fpdriver = new FileProperties(path+"driver.properties");
+	fppathreport = new FileProperties(path+"pathreport.properties");
+	url = fpurl.getProperties("finalurl");
+	if(browser.equals("chrome")) {
+	    typeDriver =  fpdriver.getProperties("chromewebdriver");
+	    pathDriver = fpdriver.getProperties("pathchromedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver =  new ChromeDriver();
+	    driver.manage().window().maximize();
+	}else if(browser.equals("firefox")) {
+	    typeDriver =  fpdriver.getProperties("firefoxwebdriver");
+	    pathDriver = fpdriver.getProperties("pathfirefoxdriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new FirefoxDriver();
+	}else if(browser.equals("ie")) {
+	    typeDriver =  fpdriver.getProperties("iewebdriver");
+	    pathDriver = fpdriver.getProperties("pathiedriver");
+	    System.setProperty(typeDriver,pathDriver);
+	    driver = new InternetExplorerDriver();
+	}
+	
 	File file = new File(pathReport);
 	if(!file.exists()) {
 	    file.mkdirs();
 	}
-	System.setProperty(webDriver,typeDriver);
-	driver =  new ChromeDriver();
-	driver.manage().window().maximize();
-	Set<String> allTabs = driver.getWindowHandles();
-	List<String> tabList = new ArrayList<String>(allTabs);
-	String newTab = tabList.get(0);
-	driver.switchTo().window(newTab);
-	extent = new ExtentReports();
 	htmlReporter = new ExtentHtmlReporter(pathReport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
+	wait = new WebDriverWait(driver, 10);
+
+	extent = new ExtentReports();
 	extent.attachReporter(htmlReporter);
     }
     
@@ -81,10 +95,7 @@ public class Home {
 	    register.click();
        	    assertEquals(driver.getCurrentUrl(), url+"register?plan=FREE");
        	    logger.log(Status.PASS, "Show message : Register page is shown");
-       	}catch (AssertionError e) {
-       	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
-       	    Assert.fail();
-       	} catch (Exception e) {
+	} catch (Exception e) {
 	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
 	    Assert.fail();
 	}
@@ -102,9 +113,6 @@ public class Home {
 	    signin.click();
        	    assertEquals(driver.getCurrentUrl(), url+"login");
        	    logger.log(Status.PASS, "Show message : Login page is shown");
-       	}catch (AssertionError e) {
-       	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
-       	    Assert.fail();
        	} catch (Exception e) {
 	    logger.log(Status.FAIL,"Test Failed  : " + e.getMessage());
 	    Assert.fail();
