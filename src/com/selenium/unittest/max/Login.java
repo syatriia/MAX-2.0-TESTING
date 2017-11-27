@@ -40,7 +40,7 @@ import com.summit.util.file.FileProperties;
 public class Login {
 
     FileProperties fpurl,fppathreport,fpdriver;
-    String pathReport,url,typeDriver,pathDriver,actual,expected;
+    String typeReport,url,typeDriver,pathDriver,actual,expected;
     WebDriver driver;
     WebDriverWait wait;
     ExtentHtmlReporter htmlReporter;
@@ -51,10 +51,12 @@ public class Login {
     @BeforeTest
     public void beforeTest(String browser) {
 	String path = System.getProperty("user.dir")+"\\resources\\";
+	String pathreport = System.getProperty("user.dir")+"\\Report Testing\\";
 	fpurl = new FileProperties(path+"url.properties");
 	fpdriver = new FileProperties(path+"driver.properties");
 	fppathreport = new FileProperties(path+"pathreport.properties");
 	url = fpurl.getProperties("finalurl");
+	typeReport = pathreport+fppathreport.getProperties("unitpathlog");
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");
@@ -73,11 +75,11 @@ public class Login {
 	    driver = new InternetExplorerDriver();
 	}
 	
-	File file = new File(pathReport);
+	File file = new File(pathreport);
 	if(!file.exists()) {
 	    file.mkdirs();
 	}
-	htmlReporter = new ExtentHtmlReporter(pathReport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
+	htmlReporter = new ExtentHtmlReporter(pathreport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
 	wait = new WebDriverWait(driver, 10);
 
 	extent = new ExtentReports();
