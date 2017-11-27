@@ -60,7 +60,8 @@ public class Testng {
 	if(browser.equals("chrome")) {
 	    Properties p = new Properties();
 	    try {
-		p.load(new FileInputStream(System.getProperty("user.dir")+"\\resources\\"+"driver.properties"));
+//		p.load(new FileInputStream(System.getProperty("user.dir")+"\\resources\\"+"driver.properties"));
+		p.load(new FileInputStream(System.getProperty("driver.properties")));
 	    } catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
