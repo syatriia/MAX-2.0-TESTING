@@ -1,18 +1,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test - Suite">
-  	<test name="firefox">
+<suite name="Test - Suite" parallel="tests">
+  	<test name="firefox" parallel="classes">
 	 <parameter name="browser" value="firefox" />
 		<classes>
 			<class name="com.selenium.unittest.max.Login"></class>
 		</classes>
 	</test>
-	<test name="chrome">
+	<test name="chrome" parallel="classes">
 	 <parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.selenium.unittest.max.Login"></class>
 		</classes>
 	</test>
-	<test name="ie">
+	<test name="ie" parallel="classes">
 	 <parameter name="browser" value="ie" />
 		<classes>
 			<class name="com.selenium.unittest.max.Login"></class>
