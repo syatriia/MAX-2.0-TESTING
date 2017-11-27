@@ -58,9 +58,6 @@ public class Topics {
 	fppathreport = new FileProperties("pathreport.properties");
 	url = fpurl.getProperties("finalurl");
 	pathReport = fppathreport.getProperties("unitpathlog");
-	pathDriver =  fpdriver.getProperties("chromedriver");
-	typeDriver = fpdriver.getProperties("chromewebdriver");
-	
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");

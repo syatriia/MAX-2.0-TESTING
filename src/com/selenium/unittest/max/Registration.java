@@ -51,10 +51,11 @@ public class Registration {
     @Parameters("browser")
     @BeforeTest
     public void prastartTest(String browser) {
-	String path = System.getProperty("user.dir")+"\\resources\\";
-	fpurl = new FileProperties(path+"url.properties");
-	fpdriver = new FileProperties(path+"driver.properties");
-	fppathreport = new FileProperties(path+"pathreport.properties");
+	String pathresource = System.getProperty("user.dir")+"\\resources\\";
+	String pathreport = System.getProperty("user.dir")+"\\Report Testing\\";
+	fpurl = new FileProperties(pathresource+"url.properties");
+	fpdriver = new FileProperties(pathresource+"driver.properties");
+	fppathreport = new FileProperties(pathresource+"pathreport.properties");
 	url = fpurl.getProperties("finalurl");
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
