@@ -72,7 +72,7 @@ public class Login {
 	if(!file.exists()) {
 	    file.mkdirs();
 	}
-	htmlReporter = new ExtentHtmlReporter(pathReport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
+	htmlReporter = new ExtentHtmlReporter(browser+"_"+pathReport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
 	wait = new WebDriverWait(driver, 10);
 
 	extent = new ExtentReports();
