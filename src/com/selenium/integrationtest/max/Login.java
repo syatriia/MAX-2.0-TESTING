@@ -45,6 +45,7 @@ public class Login {
     @BeforeTest
     public void beforeTest(String browser) {
 	String path = System.getProperty("user.dir")+"\\resources\\";
+	String pathreport = System.getProperty("user.dir")+"\\Report Testing\\";
 	fpurl = new FileProperties(path+"url.properties");
 	fpdriver = new FileProperties(path+"driver.properties");
 	fppathreport = new FileProperties(path+"pathreport.properties");

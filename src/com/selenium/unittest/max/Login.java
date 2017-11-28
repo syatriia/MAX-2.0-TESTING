@@ -40,7 +40,7 @@ import com.summit.util.file.FileProperties;
 public class Login {
 
     FileProperties fpurl,fppathreport,fpdriver;
-    String typeReport,url,typeDriver,pathDriver,actual,expected;
+    String pathReport,typeReport,url,typeDriver,pathDriver,actual,expected;
     WebDriver driver;
     WebDriverWait wait;
     ExtentHtmlReporter htmlReporter;
@@ -56,7 +56,8 @@ public class Login {
 	fpdriver = new FileProperties(path+"driver.properties");
 	fppathreport = new FileProperties(path+"pathreport.properties");
 	url = fpurl.getProperties("finalurl");
-	typeReport = pathreport+fppathreport.getProperties("unitpathlog");
+	typeReport = fppathreport.getProperties("unitpathlog");
+	pathReport = pathreport+typeReport;
 	if(browser.equals("chrome")) {
 	    typeDriver =  fpdriver.getProperties("chromewebdriver");
 	    pathDriver = fpdriver.getProperties("pathchromedriver");
@@ -75,11 +76,11 @@ public class Login {
 	    driver = new InternetExplorerDriver();
 	}
 	
-	File file = new File(pathreport);
+	File file = new File(pathReport);
 	if(!file.exists()) {
 	    file.mkdirs();
 	}
-	htmlReporter = new ExtentHtmlReporter(pathreport+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
+	htmlReporter = new ExtentHtmlReporter(pathReport+browser+"_"+this.getClass().getSimpleName()+"_log_"+df.format(new Date())+".html" );
 	wait = new WebDriverWait(driver, 10);
 
 	extent = new ExtentReports();
